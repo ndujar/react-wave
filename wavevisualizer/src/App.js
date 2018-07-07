@@ -13,7 +13,7 @@ class App extends Component {
       phase: 0,
       viewBoxWidth: 700,
       viewBoxHeight: 300,
-      sampling: 10
+      sampling: 20
     }
   }
 
@@ -50,7 +50,7 @@ class App extends Component {
                   maxValue={50}
                   minValue={1}
                   value={this.state.frequency}
-                  onChange={value => this.setState({ frequency: value, sampling: value * 10 })}
+                  onChange={value => this.setState({ frequency: value, sampling: value * 20 })}
                 />
 
                 <p>cycles</p>
@@ -69,7 +69,7 @@ class App extends Component {
                   onChange={value => this.setState({ phase: value })}
                 />
 
-                <p>size</p>
+              <p>size (px)</p>
                 <InputRange
                   maxValue={500}
                   minValue={50}
@@ -78,7 +78,7 @@ class App extends Component {
                 />
 
 
-                <p>sampling rate</p>
+              <p>sampling rate (points per cycle)</p>
                 <InputRange
                   maxValue={500}
                   minValue={10}
