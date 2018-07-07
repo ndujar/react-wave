@@ -1,0 +1,9 @@
+.linechart_path {
+  stroke-width: 1;
+  fill: none;
+}
+
+.linechart_axis {
+  stroke-width: 3;
+  stroke: #bdc3c7;
+}

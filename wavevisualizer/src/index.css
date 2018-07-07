@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 10px 25px;
+}
+
+.container-fluid {
+    padding: 10px 10px;
+}
