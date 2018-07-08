@@ -1,7 +1,7 @@
 # react-wave
 A react app for visualizing sine signals
 
-This app uses React to visualize a sine function under the effect of the following modifiable parameters:
+This app uses React and Bootstrap to render a sine function under the effect of the following modifiable parameters:
 
 -Frequency (in Hz)
 
