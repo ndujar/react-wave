@@ -1,7 +1,7 @@
 # react-wave
-A react app for visualization of wave forms
+A react app for visualizing sine signals
 
-This app uses React to visualize a Sine function under the effect of the following modifiable parameters:
+This app uses React to visualize a sine function under the effect of the following modifiable parameters:
 
 -Frequency (in Hz)
 
@@ -13,7 +13,11 @@ Besides, it enables the user to enhance the render by means of an scalable plot 
 
 # Usage
 
-In order to run it, clone the repository in your computer, then, in the project directory wavevisualizer, you can run:
+In order to inspect it, clone the repository in your computer, then, in the project directory `/wavevisualizer`, you can run:
+
+### `npm install`
+
+then
 
 ### `npm start`
 
@@ -22,6 +26,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
+
+If otherwise you are only interested in the bundle, go to the `/wavevisualizer/build` folder and get it from there.
 
 ## Initial values are set to one Hz, one cycle, no delay (phase = 0 degrees)
 
@@ -43,8 +49,6 @@ You will also see any lint errors in the console.
 
 ![alt text](https://raw.githubusercontent.com/ndujar/react-wave/master/img/Size.png)
 
-## By default, for every one Hz the resolution is automatically set to 20 points. However, the user can easily adapt the chart to display up to 1000 points. Just drag the slider to the desired level.
+## By default, for every one Hz the resolution sets automatically to 20 points. However, the user can easily adapt the chart to display up to 1000 points. Just drag the slider to the desired level.
 
 ![alt text](https://raw.githubusercontent.com/ndujar/react-wave/master/img/Sampling.png)
-
-
