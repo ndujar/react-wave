@@ -78,9 +78,9 @@ class App extends Component {
                 />
 
 
-              <p>sampling rate (points per cycle)</p>
+              <p>sampling rate (number of displayed points)</p>
                 <InputRange
-                  maxValue={500}
+                  maxValue={1000}
                   minValue={10}
                   value={this.state.sampling}
                   onChange={value => this.setState({ sampling: value })}
