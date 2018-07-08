@@ -61,4 +61,4 @@ A simple unit test is included in App.test.js. If you would like to implement yo
 
 # Dependencies
 
-This app uses
+This app uses `Bootstrap` for managing responsiveness, `react-input-range` for the input sliders and the default react components installed with `create-react-app`.
