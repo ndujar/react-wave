@@ -25,7 +25,7 @@ class App extends Component {
 
     for (let x = 0; x < cycles; x++) {
       for (let i = 0; i <= sampling; i += 1) {
-        const y = (Math.sin(frequency * t + phase));
+        const y = (Math.sin(frequency * t + phase * (2 * Math.PI / 360)));
         t += increase;
         data.push({t,y})
       }
@@ -45,7 +45,7 @@ class App extends Component {
             <div className="col-sm-4">
               <form className="form">
 
-                <p>frequency</p>
+                <p>frequency (Hz)</p>
                 <InputRange
                   maxValue={50}
                   minValue={1}
@@ -53,7 +53,7 @@ class App extends Component {
                   onChange={value => this.setState({ frequency: value, sampling: value * 20 })}
                 />
 
-                <p>cycles</p>
+              <p>cycles (units)</p>
                 <InputRange
                     maxValue={10}
                     minValue={1}
@@ -61,12 +61,12 @@ class App extends Component {
                     onChange={value => this.setState({ cycles: value })}
                   />
 
-                <p>phase</p>
+                <p>phase (deg)</p>
                 <InputRange
-                  maxValue={100}
+                  maxValue={360}
                   minValue={0}
                   value={this.state.phase}
-                  onChange={value => this.setState({ phase: value })}
+                  onChange={value => this.setState({ phase:  value })}
                 />
 
               <p>size (px)</p>
