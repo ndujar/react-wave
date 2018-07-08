@@ -96,8 +96,9 @@ class App extends Component {
                                                       this.state.cycles,
                                                       this.state.phase,
                                                       this.state.sampling)}
-                                                      svgHeight = {this.state.viewBoxHeight}
-                                                      svgWidth = {this.state.viewBoxWidth} />
+                         svgHeight = {this.state.viewBoxHeight}
+                         svgWidth = {this.state.viewBoxWidth}
+              />
             </div>
           </div>
         </div>

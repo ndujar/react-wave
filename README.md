@@ -52,3 +52,9 @@ If otherwise you are only interested in the bundle, go to the `/wavevisualizer/b
 ## By default, for every one Hz the resolution sets automatically to 20 points. However, the user can easily adapt the chart to display up to 1000 points. Just drag the slider to the desired level.
 
 ![alt text](https://raw.githubusercontent.com/ndujar/react-wave/master/img/Sampling.png)
+
+#Unit Testing
+
+A simple unit test is included in App.test.js. If you would like to implement your own unit tests and run them just execute:
+
+### `npm test`
