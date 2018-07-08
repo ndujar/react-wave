@@ -53,8 +53,12 @@ If otherwise you are only interested in the bundle, go to the `/wavevisualizer/b
 
 ![alt text](https://raw.githubusercontent.com/ndujar/react-wave/master/img/Sampling.png)
 
-#Unit Testing
+# Unit Testing
 
 A simple unit test is included in App.test.js. If you would like to implement your own unit tests and run them just execute:
 
 ### `npm test`
+
+# Dependencies
+
+This app uses
