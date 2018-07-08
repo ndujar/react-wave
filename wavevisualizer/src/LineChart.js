@@ -1,6 +1,10 @@
+//LineChart class is adapted from Brandon Morelli's excellent SVG introductory tutorial
+//Available here: https://codeburst.io/simple-data-visualization-with-react-js-svg-line-chart-tutorial-df12e5843ce
+
 import React, {Component} from "react"
 import "./LineChart.css"
 
+//LineChart: This class renders an SVG path from a series of x,y input pairs
 class LineChart extends Component {
   // GET MAX & MIN X
   getMinX() {
@@ -20,17 +24,20 @@ class LineChart extends Component {
     const {data} = this.props;
     return data.reduce((max, p) => p.y > max ? p.y : max, data[0].y);
   }
-
+  //getSvgX: We need to convert the largest X value to SVG coordinates. For now, we ignore negative values of x
   getSvgX(x) {
     const {svgWidth} = this.props;
     return (x / this.getMaxX() * svgWidth);
   }
+  //getSvgY; Our sine function returns positive as well as negative values. SVG values can only be positive
+  //from the upper left corner.
   getSvgY(y) {
     const {svgHeight} = this.props;
 
     return svgHeight * 0.5 - (y / (this.getMaxY() - this.getMinY()) * svgHeight * 0.5);
   }
-
+  //makePath: The SVG path is simply a sequence of coordinates seoarated with spaces and indicated by M(startX startY)
+  //to begin and L(coordX coordY) afterwards.
   makePath() {
     const {data, color} = this.props;
 
@@ -48,7 +55,7 @@ class LineChart extends Component {
       <path className="linechart_path" d={pathD} style={{stroke: color}} />
     );
   }
-
+  //makeAxis: To draw the axes we need to translate the origin coordinates again to the SVG coordinates
   makeAxis() {
     const minX = this.getMinX(), maxX = this.getMaxX();
     const minY = this.getMinY(), maxY = this.getMaxY();
@@ -64,7 +71,7 @@ class LineChart extends Component {
       </g>
       );
     }
-
+  //rednder: We will return an HTML element containing the path and the axes
   render() {
     const {svgHeight, svgWidth} = this.props;
 
